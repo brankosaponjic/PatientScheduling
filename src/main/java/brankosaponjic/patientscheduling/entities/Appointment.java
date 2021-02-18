@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.ManyToOne;
 import java.sql.Timestamp;
 
 @Data
@@ -15,4 +16,10 @@ public class Appointment {
     private boolean started;
     private boolean ended;
     private String reason;
+
+    @ManyToOne
+    private Patient patient;
+
+    @ManyToOne
+    private Doctor doctor;
 }

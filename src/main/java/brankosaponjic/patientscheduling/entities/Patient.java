@@ -26,4 +26,7 @@ public class Patient {
                joinColumns = @JoinColumn(name = "patient_id", referencedColumnName = "id"),
                inverseJoinColumns = @JoinColumn(name = "doctor_id", referencedColumnName = "id"))
     private List<Doctor> doctors;
+
+    @OneToMany
+    private List<Appointment> appointments;
 }
