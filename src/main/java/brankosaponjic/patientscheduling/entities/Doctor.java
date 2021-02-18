@@ -22,6 +22,6 @@ public class Doctor {
     @ManyToMany(mappedBy = "doctors")
     private List<Patient> patients;
 
-    @OneToMany
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private List<Appointment> appointments;
 }

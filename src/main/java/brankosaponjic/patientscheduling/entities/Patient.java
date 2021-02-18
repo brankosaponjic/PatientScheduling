@@ -27,6 +27,6 @@ public class Patient {
                inverseJoinColumns = @JoinColumn(name = "doctor_id", referencedColumnName = "id"))
     private List<Doctor> doctors;
 
-    @OneToMany
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<Appointment> appointments;
 }
