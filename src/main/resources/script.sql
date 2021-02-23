@@ -31,7 +31,7 @@ create table appointment(
 id int primary key auto_increment,
 patient_id int,
 doctor_id int,
-appointment_date datetime,
+appointment_time datetime,
 started tinyint(1),
 ended tinyint(1),
 reason varchar(200),
